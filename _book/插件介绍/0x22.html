@@ -1,0 +1,650 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title> 第二节 YouCompleteMe  · Vim 学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Faner">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0x23.html" />
+    
+    
+    <link rel="prev" href="0x21.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.seule.cn" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                     前  言 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../0x00.html">
+            
+                <a href="../0x00.html">
+            
+                    
+                     第一部分 使用操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../基础操作/0x01.html">
+            
+                <a href="../基础操作/0x01.html">
+            
+                    
+                     第一节 复制、剪切和粘贴 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../基础操作/0x02.html">
+            
+                <a href="../基础操作/0x02.html">
+            
+                    
+                     第二节 删除 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../基础操作/0x03.html">
+            
+                <a href="../基础操作/0x03.html">
+            
+                    
+                     第三节 选择 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../基础操作/0x04.html">
+            
+                <a href="../基础操作/0x04.html">
+            
+                    
+                     第四节 移动 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../基础操作/0x05.html">
+            
+                <a href="../基础操作/0x05.html">
+            
+                    
+                     第五节 块编辑 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../基础操作/0x06.html">
+            
+                <a href="../基础操作/0x06.html">
+            
+                    
+                     第六节 替换 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../基础操作/0x07.html">
+            
+                <a href="../基础操作/0x07.html">
+            
+                    
+                     第七节 执行Shell命令 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../基础操作/0x08.html">
+            
+                <a href="../基础操作/0x08.html">
+            
+                    
+                     第八节 分屏 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../基础操作/0x09.html">
+            
+                <a href="../基础操作/0x09.html">
+            
+                    
+                     第九节 执行二进制文件 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../基础操作/0x10.html">
+            
+                <a href="../基础操作/0x10.html">
+            
+                    
+                     第十节 大小写转换 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../基础操作/0x11.html">
+            
+                <a href="../基础操作/0x11.html">
+            
+                    
+                     十一节 输入特殊字符 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../基础操作/0x12.html">
+            
+                <a href="../基础操作/0x12.html">
+            
+                    
+                     十二节 Vimrc配置 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../基础操作/0x13.html">
+            
+                <a href="../基础操作/0x13.html">
+            
+                    
+                     十三节 Vimrc文件 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0x20.html">
+            
+                <a href="../0x20.html">
+            
+                    
+                     第二部分 插件简介 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="0x21.html">
+            
+                <a href="0x21.html">
+            
+                    
+                     第一节 Vundle 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="0x22.html">
+            
+                <a href="0x22.html">
+            
+                    
+                     第二节 YouCompleteMe 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="0x23.html">
+            
+                <a href="0x23.html">
+            
+                    
+                     第三节 Markdown 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="0x24.html">
+            
+                <a href="0x24.html">
+            
+                    
+                     第四节 MiniBufExplorer 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="0x25.html">
+            
+                <a href="0x25.html">
+            
+                    
+                     第五节 Taglist 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="0x26.html">
+            
+                <a href="0x26.html">
+            
+                    
+                     第六节 Ctags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="0x27.html">
+            
+                <a href="0x27.html">
+            
+                    
+                     第七节 NERDTree 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="0x28.html">
+            
+                <a href="0x28.html">
+            
+                    
+                     第八节 Winmanager 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="0x29.html">
+            
+                <a href="0x29.html">
+            
+                    
+                     第九节 vim-multiple-cursors 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="0x30.html">
+            
+                <a href="0x30.html">
+            
+                    
+                     第十节 其他插件 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." > 第二节 YouCompleteMe </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="youcompleteme">YouCompleteMe</h1>
+<hr>
+<p><a href="https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64" target="_blank">&#x5730;&#x5740;</a></p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<h3 id="vundle">Vundle</h3>
+<pre class="language-"><code class="lang-bash">Plugin <span class="token string">&apos;Valloric/YouCompleteMe&apos;</span>
+</code></pre>
+<h3 id="cmake">Cmake</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> build-essential cmake
+</code></pre>
+<h3 id="c&#x8BED;&#x8A00;&#x652F;&#x6301;&#x5B89;&#x88C5;">c&#x8BED;&#x8A00;&#x652F;&#x6301;&#x5B89;&#x88C5;</h3>
+<pre class="language-"><code>cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+</code></pre><h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<h3 id="vimrc&#x914D;&#x7F6E;">vimrc&#x914D;&#x7F6E;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token keyword">let</span> g:ycm_global_ycm_extra_conf <span class="token operator">=</span> <span class="token string">&apos;/home/zhangjikai/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py&apos;</span>
+<span class="token keyword">let</span> g:ycm_semantic_triggers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> g:ycm_semantic_triggers.c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;-&gt;&apos;</span>, <span class="token string">&apos;.&apos;</span>, <span class="token string">&apos;(&apos;</span>, <span class="token string">&apos;[&apos;</span>, <span class="token string">&apos;&amp;&apos;</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> g:ycm_collect_identifiers_from_tags_files<span class="token operator">=</span>1
+<span class="token keyword">let</span> g:ycm_min_num_of_chars_for_completion<span class="token operator">=</span>3
+<span class="token keyword">let</span> g:ycm_seed_identifiers_with_syntax<span class="token operator">=</span>1
+
+<span class="token string">&quot; YouCompleteMe &#x529F;&#x80FD;  
+&quot;</span> &#x8865;&#x5168;&#x529F;&#x80FD;&#x5728;&#x6CE8;&#x91CA;&#x4E2D;&#x540C;&#x6837;&#x6709;&#x6548;  
+<span class="token keyword">let</span> g:ycm_complete_in_comments<span class="token operator">=</span>0
+<span class="token string">&quot; &#x5141;&#x8BB8; vim &#x52A0;&#x8F7D; .ycm_extra_conf.py &#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x518D;&#x63D0;&#x793A;  
+let g:ycm_confirm_extra_conf=0
+&quot;</span> &#x5F00;&#x542F; YCM &#x57FA;&#x4E8E;&#x6807;&#x7B7E;&#x5F15;&#x64CE;  
+<span class="token keyword">let</span> g:ycm_collect_identifiers_from_tags_files<span class="token operator">=</span>1  
+<span class="token string">&quot; &#x5F15;&#x5165; C++ &#x6807;&#x51C6;&#x5E93;tags&#xFF0C;&#x8FD9;&#x4E2A;&#x6CA1;&#x6709;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF0C;&#x53EA;&#x8981;.ycm_extra_conf.py&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x8DEF;&#x5F84;  
+set tags+=/data/misc/software/misc./vim/stdcpp.tags  
+&quot;</span> YCM &#x96C6;&#x6210; OmniCppComplete &#x8865;&#x5168;&#x5F15;&#x64CE;&#xFF0C;&#x8BBE;&#x7F6E;&#x5176;&#x5FEB;&#x6377;&#x952E;  
+inoremap <span class="token operator">&lt;</span>leader<span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token operator">&lt;</span>C-x<span class="token operator">&gt;</span><span class="token operator">&lt;</span>C-o<span class="token operator">&gt;</span>  
+<span class="token string">&quot; &#x8865;&#x5168;&#x5185;&#x5BB9;&#x4E0D;&#x4EE5;&#x5206;&#x5272;&#x5B50;&#x7A97;&#x53E3;&#x5F62;&#x5F0F;&#x51FA;&#x73B0;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x8865;&#x5168;&#x5217;&#x8868;  
+set completeopt-=preview  
+&quot;</span> &#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x952E;&#x5165;&#x5B57;&#x7B26;&#x5C31;&#x5F00;&#x59CB;&#x7F57;&#x5217;&#x5339;&#x914D;&#x9879;  
+<span class="token keyword">let</span> g:ycm_min_num_of_chars_for_completion<span class="token operator">=</span>1
+<span class="token string">&quot; &#x7981;&#x6B62;&#x7F13;&#x5B58;&#x5339;&#x914D;&#x9879;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x5339;&#x914D;&#x9879;  
+let g:ycm_cache_omnifunc=0  
+&quot;</span> &#x8BED;&#x6CD5;&#x5173;&#x952E;&#x5B57;&#x8865;&#x5168;              
+<span class="token keyword">let</span> g:ycm_seed_identifiers_with_syntax<span class="token operator">=</span>1  
+<span class="token string">&quot; &#x4FEE;&#x6539;&#x5BF9;C&#x51FD;&#x6570;&#x7684;&#x8865;&#x5168;&#x5FEB;&#x6377;&#x952E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;CTRL + space&#xFF0C;&#x4FEE;&#x6539;&#x4E3A;ALT + ;  
+let g:ycm_key_invoke_completion = &apos;&lt;M-;&gt;&apos;  
+&quot;</span> &#x8BBE;&#x7F6E;&#x8F6C;&#x5230;&#x5B9A;&#x4E49;&#x5904;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x4E3A;ALT + G&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x8D5E;  
+nmap <span class="token operator">&lt;</span>M-g<span class="token operator">&gt;</span> :YcmCompleter GoToDefinitionElseDeclaration <span class="token operator">&lt;</span>C-R<span class="token operator">&gt;=</span>expand<span class="token punctuation">(</span><span class="token string">&quot;&lt;cword&gt;&quot;</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span><span class="token operator">&lt;</span>CR<span class="token operator">&gt;</span>  
+&quot; &#x8BBE;&#x7F6E;&#x6309;&#x54EA;&#x4E2A;&#x952E;&#x4E0A;&#x5C4F;
+<span class="token keyword">let</span> g:ycm_key_list_select_completion <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;&lt;TAB&gt;&apos;</span>, <span class="token string">&apos;&lt;Down&gt;&apos;</span>, <span class="token string">&apos;&lt;Enter&gt;&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="ycmextraconfpy-&#x914D;&#x7F6E;">ycm_extra_conf.py &#x914D;&#x7F6E;</h3>
+<h4 id="&#x652F;&#x6301;&#x63D0;&#x793A;&#x5934;&#x6587;&#x4EF6;">&#x652F;&#x6301;&#x63D0;&#x793A;&#x5934;&#x6587;&#x4EF6;</h4>
+<p>&#x5728; <code>flag=[*]</code> &#x91CC;&#x52A0;&#x5165;</p>
+<pre class="language-"><code class="lang-bash"><span class="token string">&apos;-isystem&apos;</span>,
+<span class="token string">&apos;/usr/include&apos;</span>
+</code></pre>
+<hr>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Faner 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-12-12 20:25:56
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0x21.html" class="navigation navigation-prev " aria-label="Previous page:  第一节 Vundle ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0x23.html" class="navigation navigation-next " aria-label="Next page:  第三节 Markdown ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":" 第二节 YouCompleteMe ","level":"1.3.2","depth":2,"next":{"title":" 第三节 Markdown ","level":"1.3.3","depth":2,"path":"插件介绍/0x23.md","ref":"插件介绍/0x23.md","articles":[]},"previous":{"title":" 第一节 Vundle ","level":"1.3.1","depth":2,"path":"插件介绍/0x21.md","ref":"插件介绍/0x21.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","github","splitter","mermaid","prism","-highlight","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Faner 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-vs.css"]},"github":{"url":"https://github.com/Seule-Seule"},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"mermaid":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Faner","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vim 学习笔记","language":"zh-hans","links":{"sidebar":{"Home":"https://www.seule.cn"}},"gitbook":"*","description":"这是一本新手入门Vim的参考书本。","direction":"ltr"},"file":{"path":"插件介绍/0x22.md","mtime":"2018-12-12T12:25:56.304Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-12T12:37:10.568Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
