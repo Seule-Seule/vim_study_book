@@ -34,6 +34,6 @@
 
 ## 开源协议
 
-[MIT](./LICENES)开源协议
+[MIT](./LICENSE)开源协议
 
 ***
